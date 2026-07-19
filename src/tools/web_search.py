@@ -10,6 +10,7 @@ client = TavilyClient(api_key=api_key)
 
 @tool
 def search(query)->list:
+    """Search the web for the given query and return result titles and URLs."""
     result =[]
     response = client.search(query)
     for i in response['results']:
@@ -20,4 +21,3 @@ def search(query)->list:
         result.append(res)
 
     return result
-

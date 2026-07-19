@@ -4,6 +4,7 @@ from langchain.tools import tool
 
 @tool
 def scraper(url : str)->list:
+    """Scrape a web page and return its title and paragraph text."""
     try:
         r = requests.get(
             url,
