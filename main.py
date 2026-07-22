@@ -1,5 +1,12 @@
+from src.agent.graph import agent_builder
+
+
 def main():
-    print("Hello from research-workflow!")
+    agent = agent_builder.compile()
+
+    query = input("Research query: ")
+    result = agent.invoke({"query": query})
+    print(result["report"])
 
 
 if __name__ == "__main__":
